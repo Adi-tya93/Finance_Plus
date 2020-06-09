@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+* {
+box-sizing: border-box;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+color: white;
+font-weight: bold;
+border: 3px solid #f1f1f1;
+position: absolute;
+top: 70%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 2;
+width: 80%;
+padding: 20px;
+text-align: center;
+}
+
+
+.row{
+background-color: rgba(0,0,0, 0);
+align-items: stretch;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+overflow-x: auto;
+overflow-y: hidden;
+}
+.card {
+/*float: left;*/
+background-color: rgba(0,0,0, 0);
+max-width: 33.333%;
+padding: .75rem;
+margin-bottom: 2rem;
+border: 0;
+flex-basis: 33.333%;
+flex-grow: 0;
+flex-shrink: 0;
+}
+
+.card > img {
+margin-bottom: .75rem;
+}
+
+.card-text {
+font-size: 85%;
+color: white;
+}
+
+{% endblock  %}
+
+
+{% block content %}
+
+<div class="bg-text">
+  <p> Please select one on the following stocks </p>
+
+  <div class="container">
+    <div class="row">
+      <div class="card">
+        <a href="stocks/MSFT">
+        <img src="https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80660_960_720.png"
+          style="width:150px;height:150px;">
+        </a>
+        <p class="card-text">MSFT Price: {{ data }} </p>
+
+      </div>
+      <div class="card">
+        <a href="stocks/AAPL">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/647px-Apple_logo_black.svg.png"
+          style="width:150px;height:150px;">
+          </a>
+        <p class="card-text">Apple Price: {{ apple }}</p>
+      </div>
+      <div class="card">
+        <a href="stocks/GOOGL">
+        <img src="https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088004_960_720.png"
+          style="width:150px;height:150px;">
+        </a>
+        <p class="card-text">Google Price: {{ google }}</p>
+      </div>
+      <div class="card">
+        <a href="stocks/TSLA">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tesla_Motors.svg/595px-Tesla_Motors.svg.png"
+          style="width:150px;height:150px;">
+          </a>
+        <p class="card-text">Tesla Price: {{ tesla }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock  %}
