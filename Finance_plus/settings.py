@@ -26,7 +26,8 @@ SECRET_KEY = '@_^y#u%3*8se598sk4wfi1u!!zy*k4hy-dt^nu3@(!8^d3_wv2'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'damp-castle-32783.herokuapp.com'
+    'damp-castle-32783.herokuapp.com',
+    '127.0.0.1'
 ]
 
 
