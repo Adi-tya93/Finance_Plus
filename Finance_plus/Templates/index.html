@@ -2,17 +2,72 @@
 
 {% block sty %}
 .container-fluid{
-    background-color: rgba(0, 0, 0, 0.2);
+background-color: rgba(0, 0, 0, 0.2);
 }
-
+.text-area{
+    font-size: 70px;
+    font-weight: bold;
+}
+.text-area span{
+    transform: translate(0, -100px) rotate(360deg) scale(0);
+    animation: 5s forwards;
+    animation-name: animate;
+    animation-iteration-count: infinite;
+    text-align: center;
+}
+.text-area span{
+    display: inline-block;
+}
+.text-area span:nth-of-type(2) {
+    animation-delay: .1s;
+}
+.text-area span:nth-of-type(3) {
+    animation-delay: .2s;
+}
+.text-area span:nth-of-type(4) {
+    animation-delay: .3s;
+}
+.text-area span:nth-of-type(5) {
+    animation-delay: .4s;
+}
+.text-area span:nth-of-type(6) {
+    animation-delay: .5s;
+}
+.text-area span:nth-of-type(7) {
+    animation-delay: .6s;
+}
+.text-area span:nth-of-type(8) {
+    animation-delay: .7s;
+}
+@keyframes animate{
+    30%{
+        transform: translate(0, -50px) rotate(180deg) scale(1);
+    }
+    60%{
+        transform: translate(0, 20px) rotate(0deg) scale(0.8);
+    }
+    100%{
+        transform: translate(0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+}
 {% endblock  %}
 
 {% block content %}
 
 <div class="container">
     <div class="row">
+        <div class="text-area col-md-12 text-center">
+            <span>W</span>
+            <span>E</span>
+            <span>L</span>
+            <span>C</span>
+            <span>O</span>
+            <span>M</span>
+            <span>E</span>
+        </div>
         <div class="padding col-md-12">
-            <h3 class="text-center">WELCOME TO FINANCE PLUS!</h3>
+            <h1 class="text-center">TO FINANCE PLUS!</h1>
         </div>
     </div>
 </div>
