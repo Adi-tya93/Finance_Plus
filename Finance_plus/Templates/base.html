@@ -1,72 +1,95 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Finance Plus</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
 
+  <title>Finance Plus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    .bg-image {
-      /* The image used */
-      background-image: url("https://p0.piqsels.com/preview/499/391/646/accountant-calculator-accounting-graphs.jpg");
-      
-      /* Add the blur effect */
-      filter: blur(8px);
-      -webkit-filter: blur(8px);
-      
-      /* Full height */
-      height: 100%; 
-      
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
+  <style>
+    body {
+      font-family: sans-serif;
+      color: lime;
+      text-shadow: .1rem .1rem .5rem black;
+      background: url('https://p1.pxfuel.com/preview/839/372/26/data-chart-graph-monitor-marketing-infographics.jpg') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
       background-size: cover;
+      -o-background-size: cover;
     }
 
-    {% block style %}
+    .padding{
+      padding: 2rem;
+    }
+
+    .navbar {
+      font-weight: 700;
+      font-size: 0.9rem;
+      background: rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .navbar-nav li {
+      padding-right: 0.7rem;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: white;
+      padding-top: 0.8rem;
+    }   
+
+    {% block sty %}
     {% endblock  %}
-    </style>
-    {% block script %}
-    {% endblock  %}
-    
-  </head>
-  <body>
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="" style="color:lime" >Finance Plus</a>
-            <a class="nav-link" href="/">Home Page<span class="sr-only">(current)</span></a>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/house">House</a>
-              <a class="dropdown-item" href="/education">Education</a>
-              <a class="dropdown-item" href="/savings/">Savings</a>
-            </div>
-      </nav>
+  </style>
 
-      <div class="bg-image"></div>
+  {% block script %}
+  {% endblock  %}
 
-      {% block content %}
-      {% endblock  %}
-    
-            <!-- Optional JavaScript -->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </body>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="/" style="color:lime">Finance Plus</a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/house/">House</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/education/">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/savings/">Savings</a>
+        </li>
+      </ul>
+  </nav>
+  {% block content %}
+  {% endblock  %}
+
+
+</body>
+
 </html>
-

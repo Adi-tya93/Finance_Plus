@@ -1,38 +1,26 @@
 {% extends 'base.html' %}
 
-{% block style %}
-
-* {
-box-sizing: border-box;
+{% block sty %}
+.container-fluid{
+background-color: rgba(0, 0, 0, 0.2);
 }
-
-/* Position text in the middle of the page/image */
-.bg-text {
-background-color: rgb(0,0,0); /* Fallback color */
-background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-color: white;
-font-weight: bold;
-border: 3px solid #f1f1f1;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-z-index: 2;
-width: 80%;
-padding: 20px;
-text-align: center;
-}
-
 {% endblock  %}
 
 
 {% block content %}
 
-<div class="bg-text">
-  <p>Please choose from below</p>
-  <a href="tips">Saving tips</a>
-  <p></p>
-  <a href="stocks">Investing with Machine learning</a>
+<div class="container-fluid padding">
+  <div class="row">
+    <div class="padding col-md-12 text-center">
+      <h3>Please choose from below</h3>
+      <div class="row">
+        <a class="col-md-6" href="tips" style="color: lime; font-size: 24px;">Saving tips</a>
+        <p></p>
+        <a class="col-md-6" href="stocks" style="color: lime; font-size: 24px;">Investing with Machine learning</a>
+      </div>
+    </div>
+  </div>
 </div>
+
 
 {% endblock  %}

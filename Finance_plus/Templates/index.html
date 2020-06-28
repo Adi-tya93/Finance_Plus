@@ -1,37 +1,49 @@
 {% extends 'base.html' %}
 
-{% block style %}
+{% block sty %}
+.container-fluid{
+    background-color: rgba(0, 0, 0, 0.2);
+}
 
- * {
-      box-sizing: border-box;
-    }
-
-    /* Position text in the middle of the page/image */
-    .bg-text {
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-      color: white;
-      font-weight: bold;
-      border: 3px solid #f1f1f1;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      width: 80%;
-      padding: 20px;
-      text-align: center;
-    }
-    
 {% endblock  %}
 
 {% block content %}
 
-  <div class="bg-text">
-    <p>Welcome to Finance Plus</p>
-  </div>
+<div class="container">
+    <div class="row">
+        <div class="padding col-md-12">
+            <h3 class="text-center">WELCOME TO FINANCE PLUS!</h3>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="padding col-md-4">
+            <h3>House</h3>
+            <ul>
+                <li>Renting vs buying</li>
+                <li>Mortgage calculator</li>
+                <li>Affordabilty calculator</li>
+            </ul>
+        </div>
+        <div class="padding col-md-4">
+            <h3>Savings</h3>
+            <ul>
+                <li>Predicting stock prices using machine learning</li>
+                <li>Psychological tricks to save more</li>
+                <li>Retirement planning</li>
+            </ul>
+        </div>
+        <div class="padding col-md-4">
+            <h3>Education</h3>
+            <ul>
+                <li>Scolarship, OSAP and bursary</li>
+                <li>Most lucrative fields</li>
+                <li>Tuition plus other expenses calculator</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 
 {% endblock  %}
-
-
-
