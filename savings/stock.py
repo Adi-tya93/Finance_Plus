@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from alpha_vantage.timeseries import TimeSeries
 
-api_key = 'M2ENTQK548AAMGQG'
+api_key = '*******' # Enter your API key from alpha_vantage
 date = list()
 open_price = list()
 high = list()
