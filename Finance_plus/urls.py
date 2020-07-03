@@ -22,5 +22,6 @@ urlpatterns = [
     path('house/', include('house.urls')),
     path('education/', include('education.urls')),
     path('savings/', include('savings.urls')),
+    path('login/', include('login.urls')),
     path('', views.index, name='index')
 ]

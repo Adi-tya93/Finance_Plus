@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block sty %}
+
+.container-fluid{
+background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+{% endblock  %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="padding col-md-12">
+            {% if result == True %}
+
+               {% if match == True %}
+                <h1 class="text-center">You are now registered as {{newuser}}</h1>
+                <div class="row">
+                    <a class="col-md-12" href="/login" style="color: lime; font-size: 24px; text-align: center; ">Return to
+                        login</a>
+                </div>
+               {% endif %}
+                
+
+            
+                {% if match == False %}
+                <h1 class="text-center">The password didn't match. Please register again</h1>
+                <div class="row">
+                    <a class="col-md-12" href="/login/register" style="color: lime; font-size: 24px; text-align: center; ">Return to
+                        register</a>
+                </div>
+                {% endif %}
+                
+
+            {% endif %}
+            
+
+            {% if result == False %}
+                <h1 class="text-center">The username {{newuser}} is already taken. Please register again</h1>
+                <div class="row">
+                    <a class="col-md-12" href="/login/register" style="color: lime; font-size: 24px; text-align: center; ">Return to
+                        register</a>
+                </div>
+            {% endif %}
+            
+        </div>
+    </div>
+</div>
+
+{% endblock  %}
