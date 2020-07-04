@@ -234,7 +234,7 @@ input[type=text]:placeholder {
     </div>
 
     <!-- Login Form -->
-    <form method="GET" action="{% url 'adduser' %}">
+    <form method="POST" action="{% url 'adduser' %}"> {% csrf_token %}
       <input type="text" id="username" class="fadeIn second" name="newuser" placeholder="Username">
       <input type="password" id="password" class="fadeIn third" name="newpassword" placeholder="Password">
       <input type="password" id="confirmpassword" class="fadeIn third" name="confirmpassword" placeholder="Confirm Password">

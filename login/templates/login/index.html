@@ -266,7 +266,7 @@ input[type=text]:placeholder {
     </div>
 
     <!-- Login Form -->
-    <form method="GET" action="{% url 'validate' %}">
+    <form method="POST" action="{% url 'validate' %}"> {% csrf_token %}
       <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username">
       <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
       <input type="submit" class="fadeIn fourth" value="Log In">
