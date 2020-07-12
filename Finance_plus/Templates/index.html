@@ -2,6 +2,9 @@
 
 {% block sty %}
 .container-fluid{
+transform: translate(-2000px, 0);
+animation: delay 6s 1s forwards;
+animation-name: ani;
 background-color:rgba(0, 0, 0, 0.8);
 color: white ;
 text-shadow: none;
@@ -22,7 +25,7 @@ font-weight: bold;
 transform: translate(0, -100px) rotate(360deg) scale(0);
 animation: 5s forwards;
 animation-name: animate;
-animation-iteration-count: infinite;
+animation-iteration-count: once;
 text-align: center;
 }
 .text-area span{
@@ -61,6 +64,11 @@ transform: translate(0) rotate(0deg) scale(1);
 opacity: 1;
 }
 }
+@keyframes ani{
+100%{
+transform: translate(0, 0);
+}
+}
 {% endblock  %}
 
 {% block content %}
@@ -85,12 +93,13 @@ opacity: 1;
     <div class="row">
         <div class="padding col-md-12">
             <h3>About</h3>
-            <p>Finance Plus primary objective is to provide people of all ages and background a platform to gain
+            <p>Our primary objective is to provide people of all ages and background a platform to gain
                 financial literacy and freedom. We live in a society where millions of people are either living in
                 poverty or with
-                criplling debt. They work effortlessly to save money for a better future but keep making common mistakes
+                crippling debt. They work effortlessly to save money for a better future but keep making common mistakes
                 and delaying the process. </p>
-            <p>That where our webiste comes into play. We provide information, tools, practice simulations and guidance
+            <p>That's where our webiste comes into play. We provide information, tools, practice simulations and
+                guidance
                 to avoid making some of the common yet easily avoidable mistakes. Its very simple to use and can be used
                 to store past data, results
                 and goals.
@@ -138,7 +147,7 @@ opacity: 1;
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="padding col-md-12">
+        <div class="padding col-md-12 text-center">
             <h3>Famous quotes</h3>
             <p>“The desire of gold is not for gold. It is for the means of freedom and benefit.”</p>
             <p>~Ralph Waldo Emerson~</p>
