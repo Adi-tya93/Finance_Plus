@@ -22,14 +22,16 @@ class UserManager(models.Manager):
 
     def login_user(self, name, password):
         users = User.objects.all()
+
         for user in users:
+            print(user.username)
             if user.username == name:
                 if user.password == password:
                     return "You are now logged in"
                 else:
                     return "Password didn't match"
-            else:
-                return "User not found. Please register"
+
+        return "User not found. Please register"
 
 
 class User(models.Model):
