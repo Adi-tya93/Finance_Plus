@@ -2,54 +2,64 @@
 
 {% block sty %}
 .container-fluid{
-background-color: rgba(0, 0, 0, 0.2);
+background-color:rgba(0, 0, 0, 0.8);
+color: white ;
+text-shadow: none;
+}
+.container-fluid h3{
+color: lime ;
+text-shadow: none;
+}
+.container-fluid h4{
+color: lime ;
+text-shadow: none;
 }
 .text-area{
-    font-size: 70px;
-    font-weight: bold;
+font-size: 70px;
+font-weight: bold;
 }
 .text-area span{
-    transform: translate(0, -100px) rotate(360deg) scale(0);
-    animation: 5s forwards;
-    animation-name: animate;
-    animation-iteration-count: infinite;
-    text-align: center;
+transform: translate(0, -100px) rotate(360deg) scale(0);
+animation: 5s forwards;
+animation-name: animate;
+animation-iteration-count: infinite;
+text-align: center;
 }
 .text-area span{
-    display: inline-block;
+display: inline-block;
 }
 .text-area span:nth-of-type(2) {
-    animation-delay: .1s;
+animation-delay: .1s;
 }
 .text-area span:nth-of-type(3) {
-    animation-delay: .2s;
+animation-delay: .2s;
 }
 .text-area span:nth-of-type(4) {
-    animation-delay: .3s;
+animation-delay: .3s;
 }
 .text-area span:nth-of-type(5) {
-    animation-delay: .4s;
+animation-delay: .4s;
 }
 .text-area span:nth-of-type(6) {
-    animation-delay: .5s;
+animation-delay: .5s;
 }
 .text-area span:nth-of-type(7) {
-    animation-delay: .6s;
+animation-delay: .6s;
 }
 .text-area span:nth-of-type(8) {
-    animation-delay: .7s;
+animation-delay: .7s;
 }
 @keyframes animate{
-    30%{
-        transform: translate(0, -50px) rotate(180deg) scale(1);
-    }
-    60%{
-        transform: translate(0, 20px) rotate(0deg) scale(0.8);
-    }
-    100%{
-        transform: translate(0) rotate(0deg) scale(1);
-        opacity: 1;
-    }
+30%{
+transform: translate(0, -50px) rotate(180deg) scale(1);
+}
+60%{
+transform: translate(0, 20px) rotate(0deg) scale(0.8);
+}
+100%{
+transform: translate(0) rotate(0deg) scale(1);
+opacity: 1;
+}
 }
 {% endblock  %}
 
@@ -73,32 +83,73 @@ background-color: rgba(0, 0, 0, 0.2);
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="padding col-md-4">
-            <h3>House</h3>
+        <div class="padding col-md-12">
+            <h3>About</h3>
+            <p>Finance Plus primary objective is to provide people of all ages and background a platform to gain
+                financial literacy and freedom. We live in a society where millions of people are either living in
+                poverty or with
+                criplling debt. They work effortlessly to save money for a better future but keep making common mistakes
+                and delaying the process. </p>
+            <p>That where our webiste comes into play. We provide information, tools, practice simulations and guidance
+                to avoid making some of the common yet easily avoidable mistakes. Its very simple to use and can be used
+                to store past data, results
+                and goals.
+            </p>
+            <p>The next steps is to develop a designated section for kids with
+                simple interactive games to teach them about money management from a early stage of life. This feature
+                could be used in highschools and by parents for educational purposes free of cost.</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid">
+
+    <div class="row" style="padding-left: 1rem;">
+        <div class="col-lg-12">
+            <h3>Current Sections</h3>
+        </div>
+        <div class="col-md-4">
+            <h4>House</h4>
             <ul>
                 <li>Renting vs buying</li>
                 <li>Mortgage calculator</li>
                 <li>Affordabilty calculator</li>
             </ul>
         </div>
-        <div class="padding col-md-4">
-            <h3>Savings</h3>
+        <div class="col-md-4">
+            <h4>Savings</h4>
             <ul>
                 <li>Predicting stock prices using machine learning</li>
                 <li>Psychological tricks to save more</li>
                 <li>Retirement planning</li>
             </ul>
         </div>
-        <div class="padding col-md-4">
-            <h3>Education</h3>
+        <div class="col-md-4">
+            <h4>Education</h4>
             <ul>
                 <li>Scolarship, OSAP and bursary</li>
-                <li>Most lucrative fields</li>
+                <li>Most lucrative career</li>
                 <li>Tuition plus other expenses calculator</li>
             </ul>
         </div>
     </div>
 </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="padding col-md-12">
+            <h3>Famous quotes</h3>
+            <p>“The desire of gold is not for gold. It is for the means of freedom and benefit.”</p>
+            <p>~Ralph Waldo Emerson~</p>
+            <p>“To contract new debts is not the way to pay old ones.”</p>
+            <p>~George Washington~</p>
+            <p>“Beware of little expenses; a small leak will sink a great ship.”</p>
+            <p>~Benjamin Franklin~</p>
+        </div>
+    </div>
+</div>
+
 
 
 {% endblock  %}

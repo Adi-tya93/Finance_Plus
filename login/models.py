@@ -24,7 +24,6 @@ class UserManager(models.Manager):
         users = User.objects.all()
 
         for user in users:
-            print(user.username)
             if user.username == name:
                 if user.password == password:
                     return "You are now logged in"
