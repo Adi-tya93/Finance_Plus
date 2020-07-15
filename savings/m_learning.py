@@ -40,12 +40,9 @@ X_future = X_future.tail(future_days)
 X_future = np.array(X_future)
 
 tree_prediction = tree.predict(X_future)
-print(np.array(df.drop(['Prediction'], 1))[-future_days:])
-print()
-print(tree_prediction)
-print()
+
 lr_prediction = lr.predict(X_future)
-print(lr_prediction)
+
 
 actual = df['1. open'][-100:]
 valid = df[-future_days:]
@@ -56,12 +53,9 @@ ar = list()
 for index, items in enumerate(actual):
     ar.append([index, 0, items])
 
-print(ar)
 
 for index, items in enumerate(valid):
     ar[index + 75][1] = items
-
-print(ar)
 
 
 #predictions = tree_prediction

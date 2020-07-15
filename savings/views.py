@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from . import stock, google, apple, tesla, m_learning
+from . import stocks
+from .stocks import get_data
+from .stocks import price_now
 import pandas as pd
+
 
 # Create your views here.
 
@@ -11,10 +14,10 @@ def index(request):
 
 
 def stocks(request):
-    data = stock.open_price[0]
-    app = apple.open_price[0]
-    goog = google.open_price[0]
-    tes = tesla.open_price[0]
+    data = get_data(sym="MSFT")
+    app = get_data(sym="AAPL")
+    goog = get_data(sym="GOOGL")
+    tes = get_data(sym="TSLA")
     return render(request, 'savings/stocks.html', {'data': data, 'apple': app, 'google': goog, 'tesla': tes})
 
 
