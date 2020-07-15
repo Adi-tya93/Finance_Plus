@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from . import stocks
+from . import stocks, m_learning
 from .stocks import get_data
 from .stocks import price_now
 import pandas as pd
