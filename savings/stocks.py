@@ -14,3 +14,11 @@ def get_data(sym):
     price = ts.get_quote_endpoint(sym)
     price_now = price[0]['05. price']
     return price_now
+
+
+def get_historical_data(sym):
+    ts = TimeSeries(key=api_key, output_format='pandas')
+    data, meta_data = ts.get_daily(
+        symbol=sym, outputsize='full')
+    data = data[::-1]
+    return data

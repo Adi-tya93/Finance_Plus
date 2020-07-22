@@ -1,19 +1,29 @@
 {% extends 'base.html' %}
 
 {% block sty %}
-.container-fluid{
-background-color: rgba(0, 0, 0, 0.2);
+.container - fluid{
+background - color: rgba(0, 0, 0, 0.2);
 }
 
 .chart{
-width: 100%; 
+width: 100 %;
 height: 300px;
-fit-object: contain;
+fit - object: contain;
 }
 
-{% endblock  %}
+{% endblock %}
 
 {% block script %}
+<script type="text/javascript">
+  var a = {{ ar }};
+  for (var i = 0; i < 100; i++) {
+    if (a[i][1] == 0) {
+      a[i][1] = null;
+    }
+  }
+</script>
+
+
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
@@ -23,38 +33,43 @@ fit-object: contain;
   function drawBackgroundColor() {
     var data = new google.visualization.DataTable();
     data.addColumn('number', 'X');
-    data.addColumn('number', 'Valid');
+    data.addColumn('number', 'Prediction');
     data.addColumn('number', 'Actual');
 
     data.addRows(
-      {{ ar }}
+      a
     );
 
 
-  var options = {
-    hAxis: {
-      title: 'Days'
-    },
-    vAxis: {
-      title: 'Price'
-    },
-    backgroundColor: '#f1f8e9'
-  };
+    var options = {
+      hAxis: {
+        title: 'Days'
+      },
+      vAxis: {
+        title: 'Price'
+      },
+      backgroundColor: '#f1f8e9'
+    };
 
-  var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-  chart.draw(data, options);
+    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
   }
 </script>
-{% endblock  %}
+{% endblock %}
 
 
 {% block content %}
 <div class="container-fluid padding">
   <div class="row">
     <div class="padding col-md-12 text-center">
-      <h3>{{ choice }}:{{price}}: The Valid data is obtained form Machine Learning</h3>
+      <h3>{{ choice }}: The Valid data is obtained form Machine Learning</h3>
       <div class="chart" id="chart_div"></div>
+      <h4>
+        The data plotted is of last 100 days and the prediction is for last 25 days.
+      </h4>
+      <h4>NOTE: This is not the prediction for next 25 days. It just a comparison between actual and prediction of last
+        25 days</h4>
     </div>
   </div>
 </div>
-{% endblock  %}
+{% endblock %}
