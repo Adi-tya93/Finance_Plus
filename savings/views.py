@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from . import stocks, m_learning
 from .stocks import get_data
-from .stocks import price_now
+from .stocks import get_historical_data_array
 from .m_learning import get_array
 import pandas as pd
 
@@ -28,4 +28,5 @@ def tips(request):
 
 def mlearning(request, choice):
     ar = get_array(sym=choice)
-    return render(request, 'savings/mlearning.html', {'choice': choice, 'ar': ar})
+    data = get_historical_data_array(sym=choice)
+    return render(request, 'savings/mlearning.html', {'choice': choice, 'ar': ar, 'dat': data})

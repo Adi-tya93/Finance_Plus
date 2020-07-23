@@ -22,3 +22,20 @@ def get_historical_data(sym):
         symbol=sym, outputsize='full')
     data = data[::-1]
     return data
+
+
+def get_historical_data_array(sym):
+    ts = TimeSeries(key=api_key, output_format='pandas')
+    data, meta_data = ts.get_daily(
+        symbol=sym, outputsize='full')
+    data = data[::-1]
+    data = data.drop(columns=['5. volume'])
+    data['day'] = "Mon"
+    data[['1. open', '2. high', '3. low', '4. close', 'day']
+         ] = data[['day', '3. low', '1. open', '4. close', '2. high']]
+    data = np.array(data)
+    d = []
+    for index, row in enumerate(data):
+        d.append(['' + str(index), row[1], row[2], row[3], row[4]])
+    d = d[0:6]
+    return d
