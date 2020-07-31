@@ -37,5 +37,5 @@ def get_historical_data_array(sym):
     d = []
     for index, row in enumerate(data):
         d.append(['' + str(index), row[1], row[2], row[3], row[4]])
-    d = d[0:6]
+    d = d[-25:]
     return d

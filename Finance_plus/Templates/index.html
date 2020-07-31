@@ -1,26 +1,7 @@
 {% extends 'base.html' %}
 
 {% block sty %}
-.container-fluid{
-transform: translate(-2000px, 0);
-animation: delay 6s 1s forwards;
-animation-name: ani;
-background-color:rgba(0, 0, 0, 0.8);
-color: white ;
-text-shadow: none;
-}
-.container-fluid h3{
-color: lime ;
-text-shadow: none;
-}
-.container-fluid h4{
-color: lime ;
-text-shadow: none;
-}
-.text-area{
-font-size: 40px;
-font-weight: bold;
-}
+
 @media (min-width:540px) {
 .text-area{
 font-size: 70px;
@@ -71,11 +52,19 @@ transform: translate(0) rotate(0deg) scale(1);
 opacity: 1;
 }
 }
-@keyframes ani{
-100%{
-transform: translate(0, 0);
-}
-}
+
+.container-fluid{
+    transform: translate(-2000px, 0);
+    animation: delay 6s 1s forwards;
+    animation-name: ani;
+    }
+ @keyframes ani{
+    100%{
+    transform: translate(0, 0);
+    }
+    }
+
+
 {% endblock  %}
 
 {% block content %}
@@ -100,7 +89,7 @@ transform: translate(0, 0);
             <p>Our primary objective is to provide people of all ages and background a platform to gain
                 financial literacy and freedom. We live in a society where millions of people are either living in
                 poverty or with
-                crippling debt. They work effortlessly to save money for a better future but keep making common mistakes
+                crippling debt. They work tirelessly to save money for a better future but keep making common mistakes
                 and delaying the process. </p>
             <p>That's where our webiste comes into play. We provide information, tools, practice simulations and
                 guidance
