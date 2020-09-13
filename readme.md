@@ -5,4 +5,4 @@
 3. Guide people make informed financial decisions when probably manking the biggest purchase of thier life (Buying a house)
 4. Give young and vetran investors cutting edge suggestions and updates using machine learning
 
-### [Link](https://share.vidyard.com/watch/fMzRSYRivnFNHDhpPMsPB1?) to a video explaining a little bit about me and the website 
+### [Link](https://share.vidyard.com/watch/fMzRSYRivnFNHDhpPMsPB1?) to a video explaining a little bit about me and the website (old link)
